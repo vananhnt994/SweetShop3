@@ -12,19 +12,30 @@ class FormSignUp(forms.ModelForm):
         'verify_password' :forms.PasswordInput(),
         'email': forms.EmailInput
     }
+  
     # username = forms.CharField(max_length=255)
     # firstname = forms.CharField(max_length=255)
     # lastname = forms.CharField(max_length=255)
     # email = forms.EmailField(max_length=13)
     # password = forms.CharField(widget=forms.PasswordInput)
     # verify_password = forms.EmailField(label="Enter your password again!")
+    def clean_username(self):
+        username = self.cleaned_data.get('username')
+        if User.objects.filter(username__iexact=username).exists():
+            raise forms.ValidationError('Username already exists')
+        return username
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(email__iexact=email).exists():
+            raise forms.ValidationError('A user has already registered using this email')
+        return email
 
-    # def clean(self):
-    #     all_clean_data = super().clean()
-    #     password = all_clean_data['password']
-    #     vpass = all_clean_data['verify_password']
-    #     if password != vpass:
-    #         raise forms.ValidationError("Make sure emails match!")
+    def clean_password(self):
+         
+         password = self.cleaned_data.get('password')
+         vpass = self.cleaned_data.get('verify_password')
+         if password != vpass:
+            raise forms.ValidationError("Make sure password match!")
     
 
 class FormSignIn(forms.Form):

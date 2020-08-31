@@ -13,16 +13,59 @@
 <body>
     <h1>Fill out the form to sign up new account!</h1>
     <div class="container">
-        <form class="" method="post">
+        <form id="signupform"class="" method="post">
             {{form.as_p}}
             {% csrf_token %}
-            <input type="submit" name="" class="btn btn-primary" value="Submit">
-        </form>
+            
+            <button id="registerSubmit" type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Großes Modal</button>
 
+            <!-- <div id="resultModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="meinGroßesModalLabel">
+                <div class="modal-dialog modal-lg hiddenModal" >
+                    <div class="modal-content" id="successModal">
+                    Registration Successful!
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="closeModal"type="submit" class="btn btn-default" onclick="modalFunction()" data-dismiss="modal" >Schließen</button>
+                    
+                  </div>
+                    
+                
+            </div> -->
+
+            
+        </form>
+        
+        
 
 
 
     </div>
+    <script>
+        function modalFunction(){
+      $(document).ready(function(){
+
+        $('#signupform').on('submit', function() {
+        event.preventDefault();
+        $.ajax({
+            url:"userapp/forms.py",
+            method:"POST",
+            data:$('#signupform').serialize(),
+            success:function(data)
+            {
+                $('#signupform')[0].reset();
+                $('#succesfulModal').show();
+                
+
+            }
+        })
+        
+    
+    });
+    });
+        }
+    </script>
 </body>
+
 
 </html>

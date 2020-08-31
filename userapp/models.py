@@ -9,7 +9,7 @@ class User(models.Model):
     lastname = models.CharField(max_length=255)
     email = models.EmailField(max_length=255,unique=True)
     password = models.CharField(max_length=255,unique=True)
-    verify_password = models.CharField(max_length=255,unique=True)
+    verify_password = models.CharField(max_length=255)
 
     def __str__(self):
         return str(self.username)
