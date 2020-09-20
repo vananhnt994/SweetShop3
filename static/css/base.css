@@ -1,0 +1,21 @@
+  body{
+    width: 1920px;
+
+  }
+  #navbarTop{
+    width: 1920px;
+    height: 100px;
+  }
+  .logo{
+    top: 20px;
+    left: 320px;
+    width: 204px;
+    height: 59px;
+    
+  }
+  .nav-link {
+      color: #BBBBBB;
+  }
+  a:hover {
+    color: #FF8B00;
+    }

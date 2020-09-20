@@ -11,8 +11,7 @@ from userapp.models import User , UserProfileInfo
 #         'password': forms.PasswordInput(),
 #         'verify_password' :forms.PasswordInput(),
 #         'email': forms.EmailInput
-#     }
-  
+#     } 
 #     # username = forms.CharField(max_length=255)
 #     # firstname = forms.CharField(max_length=255)
 #     # lastname = forms.CharField(max_length=255)
@@ -29,14 +28,12 @@ from userapp.models import User , UserProfileInfo
 #         if User.objects.filter(email__iexact=email).exists():
 #             raise forms.ValidationError('A user has already registered using this email')
 #         return email
-
 #     def clean_password(self):
-         
 #          password = self.cleaned_data.get('password')
 #          vpass = self.cleaned_data.get('verify_password')
 #          if password != vpass:
 #             raise forms.ValidationError("Make sure password match!")
-    
+
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
     class Meta():
@@ -53,4 +50,3 @@ class UserProfileInfoForm(forms.ModelForm):
      class Meta():
          model = UserProfileInfo
          fields = ('portfolio_site','profile_pic')
-    
