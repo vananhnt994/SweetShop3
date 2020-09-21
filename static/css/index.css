@@ -1,8 +1,55 @@
-.topContainer{
-    width: 100%;
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.carousel-item:after {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#00000080;
+}
+#introductionProduct{
+    width: 80%;
     height: 100%;
+    margin: 3rem 0rem 3rem 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .caption{
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
+  }
+  #storyAbout{
+    margin: 0rem 0rem 10rem 10rem ;
     display: flex;
     flex-direction: column;
+    width: 80%;
+
   }
+  .cupcakes{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 30%;
+    height: 30%;
+    margin-right: 30px;
+  
+  }
+  .storyContent{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    
+  }
+  .ourValue{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+  }
+
 
 
