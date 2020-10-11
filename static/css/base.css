@@ -1,0 +1,27 @@
+
+  #navbarTop{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    /* width: 120em;
+    height: 6.25em; */
+    background: #FFFFFF;
+    box-shadow: rgb(71, 65, 65);
+    margin: 0.01% 16% 0.01% 16%;
+  
+    
+  }
+  .logo{
+    
+    width: 12.75em;
+    max-width: 78%;
+  }
+  a {
+      color: #BBBBBB;
+     
+  }
+  a:hover {
+    color: #FF8B00;
+    }
+  
+ 

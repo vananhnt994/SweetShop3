@@ -1,7 +1,7 @@
-{% extends 'userapp/base.html' %}
+{% extends 'userapp/../base.html' %}
 {% block body_block %}
   <div class="container">
-    <div class="jumbotron">
+    <div class="">
       <h1>Login here :</h1>
 <form method="post" action="{% url 'login' %}">
           {% csrf_token %}
