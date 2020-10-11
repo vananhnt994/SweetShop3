@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% extends "userapp/base.html" %}
+{% extends "userapp/../base.html" %}
 {% load static %}
 {% block 'additional_includes' %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
@@ -50,63 +50,92 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-    
-  <div id="introductionProduct">
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <div >
-          <h3><b>Why SS3</b></h3>
-          <p class="caption">Bubble tea (also known as pearl milk
-            tea, bubble milk tea, or boba) is a
-            tea-based drink invented in Taiwan</p>
-         
-         
+  <div id="top50">
+    <div id="introductionProduct">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div >
+            <h3><b>Why SS3</b></h3>
+            <p class="caption">Bubble tea (also known as pearl milk
+              tea, bubble milk tea, or boba) is a
+              tea-based drink invented in Taiwan</p>
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div >
+              <h3><b>Our Drinks</b></h3>
+              <p class="caption">Bubble tea (also known as pearl milk
+                  tea, bubble milk tea, or boba) is a
+                  tea-based drink invented in Taiwan</p>         
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div class="caption">
+              <h3><b>Our Bakery</b></h3>
+              <p class="caption">Bubble tea (also known as pearl milk
+                  tea, bubble milk tea, or boba) is a
+                  tea-based drink invented in Taiwan</p>         
+          </div>
         </div>
       </div>
     </div>
-      
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <div >
-            <h3><b>Our Drinks</b></h3>
-            <p class="caption">Bubble tea (also known as pearl milk
-                tea, bubble milk tea, or boba) is a
-                tea-based drink invented in Taiwan</p>         
-         
-        </div>
-      </div>
-    </div>
-      
-      <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <div class="caption">
-            <h3><b>Our Bakery</b></h3>
-            <p class="caption">Bubble tea (also known as pearl milk
-                tea, bubble milk tea, or boba) is a
-                tea-based drink invented in Taiwan</p>         
-         
+    <div id="storyAbout">
+      <h4 class="text-center">Story about us</h4>
+      <div class="storyContent">
+        <img class ="cupcakes img-fluid"src="static\images\cupcakes-690040_1920.png" alt="Cupcakes">
+        <div class="ourValue">
+          <h5>Our value</h5>
+          <p>Bubble tea (also known as pearl milk tea, bubble milk tea, or boba) is a
+            tea-based drink invented in Taiwan during the 1980s, which is shaken with
+            ice to create the "bubbles", a foamy layer on top of the drink; chewy tapioca
+            balls ("boba" or "pearls") are added as well. Ice-blended versions are frozen
+            and put into a blender, resulting in a slushy consistency.There are many
+            varieties of the drink with a wide range of flavors. The two most popular
+            varieties are black pearl milk tea and green pearl milk tea.</p>
+          <a href="#" style="color:#FF8B00;">Read more ></a>
         </div>
       </div>
     </div>
   </div>
-  
-  <div id="storyAbout">
-    <h4 class="text-center">Story about us</h4>
-    <div class="storyContent">
-      <img class ="cupcakes img-fluid"src="static\images\cupcakes-690040_1920.png" alt="Cupcakes">
-      <div class="ourValue">
-        <h5>Our value</h5>
-        <p>Bubble tea (also known as pearl milk tea, bubble milk tea, or boba) is a
-          tea-based drink invented in Taiwan during the 1980s, which is shaken with
-          ice to create the "bubbles", a foamy layer on top of the drink; chewy tapioca
-          balls ("boba" or "pearls") are added as well. Ice-blended versions are frozen
-          and put into a blender, resulting in a slushy consistency.There are many
-          varieties of the drink with a wide range of flavors. The two most popular
-          varieties are black pearl milk tea and green pearl milk tea.</p>
-        <a href="#" style="color:#FF8B00;">Read more ></a>
+  <div id="downloadTheApp">
+    <img class="downloadApp img-fluid" src="static\images\download the app.png" alt="Download the App">
+  </div>
+  <div id="bottom50">
+    <div id="storyAbout">
+      <h4 class="text-center">Story about us</h4>
+      <div class="storyContent">
+        <div class="ourValue">
+          <h5>Our value</h5>
+          <p>Bubble tea (also known as pearl milk tea, bubble milk tea, or boba) is a
+            tea-based drink invented in Taiwan during the 1980s, which is shaken with
+            ice to create the "bubbles", a foamy layer on top of the drink; chewy tapioca
+            balls ("boba" or "pearls") are added as well. Ice-blended versions are frozen
+            and put into a blender, resulting in a slushy consistency.There are many
+            varieties of the drink with a wide range of flavors. The two most popular
+            varieties are black pearl milk tea and green pearl milk tea.</p>
+          <a href="#" style="color:#FF8B00;">Read more ></a>
+        </div>
+        <img class ="cupcakes img-fluid"src="static\images\cakes.png" alt="Cakes">
       </div>
     </div>
+    <div class="pictureParent">
+      <img class="pfad img-fluid" src="static\images\Pfad 149.png">
+      <div class="pictureHolder">
+        <img class="pictureChild img-fluid" src="static\images\golden-gate-bridge-1081782_1920.png">
+        <img class="pictureChild img-fluid" src="static\images\tokyo-4807294_1920.png">
+        <img class="pictureChild img-fluid" src="static\images\toronto-1298016_1920.png">
+        <img class="pictureChild img-fluid" src="static\images\eiffel-tower-3349075_1920.png">
+    </div>
+    </div>
+
+
   </div>
+
+
 
 
 

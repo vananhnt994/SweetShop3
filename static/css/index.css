@@ -1,7 +1,9 @@
 .container{
   display: flex;
   flex-direction: column;
+  
 }
+
 .carousel-item:after {
   content:"";
   position:absolute;
@@ -11,6 +13,9 @@
   right:0;
   background:#00000080;
 }
+#carouselMain{
+  background-color: #F9F9F9;
+}
 #introductionProduct{
     width: 80%;
     height: 100%;
@@ -19,16 +24,19 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    
+  }
+  #top50{
+    background-color: #F9F9F9;
   }
   .caption{
     padding: 0.5rem 0.5rem 0.5rem 0rem;
   }
   #storyAbout{
-    margin: 0rem 0rem 10rem 10rem ;
+    margin: 0rem 0rem 0rem 10rem ;
     display: flex;
     flex-direction: column;
     width: 80%;
-
   }
   .cupcakes{
     border: 1px solid #ddd;
@@ -50,6 +58,45 @@
     flex-direction: column;
     margin-right: 10%;
   }
+  #downloadTheApp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 4.5%;
+    width: 100%;
+    background-color: #FFFF;
+  } 
+  .downloadApp{
+    padding: 2em 10em 2em 10em;
+    width: 70%;
+    height: auto;
+  }
+  .pictureParent{
+    position: relative;
+  }
+  .pfad{
+    position: absolute;
+  }
+  
+  .pictureHolder{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 27%;
+    margin-left: 5em;
+    margin-top: 3em;
+    top:15em;
+  }
+  .pictureChild{
+    padding: 10% 10%;
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10%;
+
+  }
+
 
 
 

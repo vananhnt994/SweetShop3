@@ -3,35 +3,8 @@ from django.db import models
 
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import UserManager,PermissionsMixin
-
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
 
-
-# class CustomUserManager(BaseUserManager):
-#     def create_user(self, email, username, password, alias=None):
-#         if not email:
-#             raise ValueError("ENTER AN EMAIL BUDDY")
-#         if not username:
-#             raise ValueError("I KNOW YOU HAVE A NAME")
-#         if not password:
-#             raise ValueError("PASSWORD?!?!?!? HELLO??")
-#         if not alias:
-#             alias = username
-        
-#         user = self.model(
-#              email = self.normalize_email(email),
-#              username = username,
-#              alias = alias)
-#         user.set_password(password)
-#         user.save()
-#         return user
-#     def create_superuser(self, email, username, password, alias=None):
-#         user = self.create_user(email, username, password, alias)
-#         user.is_staff()
-#         user.is_superuser = True
-#         user.save()
-#         return user
-# Create your models here.
 
 class User(AbstractBaseUser,PermissionsMixin):
 
