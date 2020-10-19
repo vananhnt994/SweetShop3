@@ -1,15 +1,15 @@
 from django.contrib import admin
 from product_catalog.models import Product,Category
-from product_catalog.forms import ProductAdminForm
+from product_catalog.forms import ProductForm
 
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
-    form = ProductAdminForm
+    form = ProductForm
 
     #set values for how admin site lists the products
     list_display = ('product_name','product_price','product_old_price','created_at',
-                    'updated_at')
+                    'updated_at',)
     list_display_links = ('product_name',)
     list_per_page = 50
     ordering = ['-created_at']
