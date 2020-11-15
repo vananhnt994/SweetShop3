@@ -10,44 +10,51 @@ class Category(models.Model):
     slug = models.SlugField(max_length=50, unique=True,
                             help_text='Unique value for product page URL, created from name.')
     category_description = models.TextField()
-    is_active = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     class Meta:
         db_table = 'categories'
-        ordering = ['-created_at']
         verbose_name_plural = 'Categories'
 
     def __unicode__(self):
         return self.category_name
 
     def get_absolute_url(self):
-        return reverse('category_slug', args={'slug':self.slug})
+        return reverse('category_slug', kwargs={'slug':self.slug})
 
+
+    def get_products(self):
+
+        return Product.objects.filter(slug=self.slug)
+
+class Size(models.Model):
+
+    size = models.CharField(max_length=20)
+
+class Sugar(models.Model):
+
+    sugar = models.DecimalField(max_digits=5, decimal_places=2)
+class Ice(models.Model):
+    ice = models.CharField(max_length=20)
 
 class Product(models.Model):
-    product_name = models.CharField(max_length=30, unique=True)
+    product_name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True,
                             help_text='Unique value for product page URL, created from name.')
     product_old_price = models.DecimalField(max_digits=10, decimal_places=2)
     product_price = models.DecimalField(max_digits=10, decimal_places=2)
-    product_size = models.CharField(max_length=20, default='small')
-    product_sugar = models.DecimalField(max_digits=5, decimal_places=2)
-    product_ice = models.CharField(max_length=20, default='regular')
-    product_quantity = models.IntegerField()
+    product_size = models.ForeignKey(Size,blank=True,on_delete=models.CASCADE)
+    product_sugar = models.ForeignKey(Sugar,blank=True,on_delete=models.CASCADE)
+    product_ice = models.ForeignKey(Ice,blank=True,on_delete=models.CASCADE)
     product_image=models.ImageField(upload_to='product_image',blank=True)
     product_description = models.TextField()
     is_active = models.BooleanField(default=True)
     is_bestseller = models.BooleanField(default=False)
     is_featured = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField(Category)
+    categories = models.ForeignKey(Category, blank=True, on_delete=models.CASCADE)
 
     class Meta:
         db_table = "products"
-        ordering = ['-created_at']
+        ordering = ['-is_bestseller']
+
 
     def __unicode__(self):
         return self.product_name
@@ -60,3 +67,5 @@ class Product(models.Model):
             return self.product_price
         else:
             return None
+
+

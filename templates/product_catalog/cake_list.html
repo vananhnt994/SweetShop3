@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+<!DOCTYPE html>
+
+<div class="container">
+{% block body_block %}
+    <div class="jumbotron" id="jumbotron" style="background-image: url(/static/images/green-tea-2356770_1920.png);">
+        <div class="text-white text-center py-5 px-4">
+        <div>
+          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Our Drinks</strong></h2>
+          <p class="mx-5 mb-5">A citrus cocktail or citrus-forward cocktail is a cocktail
+              whose dominant taste is that of a citrus fruit
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+
+    </div>
+
+    <div id="listDrinks">
+        <ol>
+        {%  for product in products %}
+            <li>
+                <ol>
+                    <li><img src="\media\{{ product.product_image }}"><br/>
+                    {{ product.product_name }}</li>
+                </ol>
+            </li>
+        {% endfor %}
+        </ol>
+
+    </div>
+
+
+
+
+
+</div>
+{% endblock %}

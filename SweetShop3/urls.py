@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from userapp import views as user
 from home import views as home
+from product_catalog import views as product
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,7 @@ urlpatterns = [
     path('logout/',user.user_logout,name="logout"),
     path('special/',user.special,name='special'),
     path('userapp/',include('userapp.urls')),
-    path('login/',user.sign_in,name="login")
+    path('login/',user.sign_in,name="login"),
+    path('drinks/',product.ProductListView.drink_list,name='drink_list'),
+    path('cakes/',product.ProductListView.cake_list,name='cake_list')
 ]

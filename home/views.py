@@ -6,5 +6,5 @@ from django.http import HttpResponse
 def index(request):
 
     welcomeText = {'welcome': "Welcome to my world!"}
-    return render(request,'home/index.html',context= welcomeText)
+    return render(request, '../index.html', context= welcomeText)
 

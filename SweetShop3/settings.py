@@ -14,9 +14,10 @@ from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR,'templates') 
+TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 MEDIA_DIR = os.path.join(BASE_DIR,'media')
 STATIC_DIR = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.dirname(__file__)+'/static/'
 
 
 # Quick-start development settings - unsuitable for production
@@ -59,9 +60,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'SweetShop3.urls'
 
 TEMPLATES = [
+
     {
+
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [BASE_DIR / 'index.html',TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,7 +135,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    STATIC_DIR,
+    BASE_DIR / "static",
+
 ]
 
 
