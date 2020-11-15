@@ -1,6 +1,10 @@
 
 {% extends 'base.html' %}
 <!DOCTYPE html>
+{% load static %}
+{% block 'additional_includes' %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
+{% endblock %}
 
 <div class="container">
 {% block body_block %}
@@ -17,7 +21,15 @@
     </div>
 
 
-    <div>
+    <div id ="bestsellerList">
+        <ol>
+            {% for product in bestseller %}
+            <li>
+                <img id="productImage" src="{{ product.product_image.url }}"><br/>
+                    {{ product.product_name }}
+            </li>
+            {% endfor %}
+        </ol>
 
     </div>
 
@@ -25,7 +37,7 @@
         <ol>
         {%  for product in products %}
             <li>
-                <img src="{{ product.product_image.url }}"><br/>
+                <img id="productImage" src="{{ product.product_image.url }}"><br/>
                     {{ product.product_name }}
             </li>
         {% endfor %}

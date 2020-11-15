@@ -1,0 +1,9 @@
+#productImage{
+    width: 150px;
+    border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+ol {
+  list-style-type: none;
+}
