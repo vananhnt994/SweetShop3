@@ -7,3 +7,21 @@
 ol {
   list-style-type: none;
 }
+#bestsellerList{
+    display: flex;
+    margin: 10em 10em 10em 30%;
+    padding-bottom: 50px;
+}
+#bestsellerList ol li {
+     float: left;
+}
+
+#listDrinks {
+    display: flex;
+    margin-left: 25em;
+    margin-right: 25em;
+}
+#listDrinks ol li {
+     float: left;
+}
+

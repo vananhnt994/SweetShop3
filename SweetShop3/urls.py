@@ -18,6 +18,10 @@ from django.urls import path, include
 from userapp import views as user
 from home import views as home
 from product_catalog import views as product
+from . import settings
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +34,5 @@ urlpatterns = [
     path('drinks/',product.ProductListView.drink_list,name='drink_list'),
     path('cakes/',product.ProductListView.cake_list,name='cake_list')
 ]
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
