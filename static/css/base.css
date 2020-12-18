@@ -1,5 +1,9 @@
 body{
    font-family: "Times New Roman", Times, serif;
+
+}
+.body-block{
+  background: #F9F9F9;
 }
   #navbarTop{
     display: flex;
@@ -10,20 +14,30 @@ body{
     background: #FFFFFF;
     box-shadow: rgb(71, 65, 65);
     margin: 0.01% 16% 0.01% 16%;
-  
-    
   }
-  .logo{
-    
+
+  .nav-link {
+      color: #BBBBBB;
+  }
+
+  .logo {
     width: 12.75em;
     max-width: 78%;
   }
+
   a {
-      color: #BBBBBB;
-     
+     font-family: "Roboto Light", sans-serif;
   }
   a:hover {
     color: #FF8B00;
+    text-decoration: none;
     }
   
  
+h5 {
+  font-family: "Roboto Light", sans-serif;
+}
+
+p {
+  font-family: "Roboto Light", sans-serif;
+}

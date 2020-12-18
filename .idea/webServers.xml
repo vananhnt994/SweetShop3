@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="279930d9-1206-43a7-8e29-fa9c640a1429" name="35.240.131.51" url="http://www.sweetshop3.xyz">
+        <fileTransfer rootFolder="/var/www/sweetshop3.xyz/public_html" accessType="SFTP" host="35.240.131.51" port="22" sshConfigId="4eba6ff8-4ccf-4e13-8bf5-1b813e61f29e" sshConfig="35.240.131.51">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

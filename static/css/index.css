@@ -1,22 +1,31 @@
-.container{
-  display: flex;
-  flex-direction: column;
-  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .carousel-item:after {
-  content:"";
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background:#00000080;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #00000080;
 }
-#carouselMain{
-  background-color: #F9F9F9;
+
+#carouselMain {
+    background-color: #F9F9F9;
 }
-#introductionProduct{
+
+#introductionProduct {
     width: 80%;
     height: 100%;
     margin: 3rem 0rem 3rem 10rem;
@@ -24,41 +33,68 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    
-  }
-  #top50{
-    background-color: #F9F9F9;
-  }
-  .caption{
+
+}
+
+#top50 {
+    margin: 0 16%;
+}
+
+.caption {
     padding: 0.5rem 0.5rem 0.5rem 0rem;
-  }
-  #storyAbout{
-    margin: 0rem 0rem 0rem 10rem ;
+}
+
+.story-wrapper {
+  margin-bottom: 7.5rem;
+  padding: 0 16%;
+}
+
+#storyAbout {
     display: flex;
     flex-direction: column;
-    width: 80%;
-  }
-  .cupcakes{
-    border: 1px solid #ddd;
-    border-radius: 4px;
+}
+
+.cupcakes {
+    border-radius: 50px 0 50px 0;
     padding: 5px;
     width: 30%;
     height: 30%;
     margin-right: 30px;
-  
-  }
-  .storyContent{
+}
+
+.story-teaser {
+    font-weight: bold;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.storyContent {
     display: flex;
     flex-direction: row;
     margin-top: 2%;
-    
-  }
-  .ourValue{
+}
+
+.ourValue {
     display: flex;
     flex-direction: column;
-    margin-right: 10%;
-  }
-  #downloadTheApp{
+    margin-right: 5%;
+}
+
+.story-headline {
+  font-size: 1.75rem;
+}
+
+.story-text {
+  font-size: 1.25rem;
+}
+
+.story-link {
+  font-size: 1.25rem;
+  color: #FF8B00;
+  text-decoration: none;
+}
+
+#downloadTheApp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,37 +102,90 @@
     height: 4.5%;
     width: 100%;
     background-color: #FFFF;
-  } 
-  .downloadApp{
+}
+
+.downloadApp {
     padding: 2em 10em 2em 10em;
     width: 70%;
     height: auto;
-  }
-  .pictureParent{
+}
+
+
+/*
+Prefooter
+______________________________
+*/
+.pictureParent {
     position: relative;
-  }
-  .pfad{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.prefooter-box {
+  width: 100%;
+  position: absolute;
+  margin-top: 15em;
+  z-index: 1;
+}
+
+.prefooter-headline {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.background-image {
     position: absolute;
-  }
-  
-  .pictureHolder{
+   width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.pictureHolder {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    position: relative;
-    width: 27%;
-    margin-left: 5em;
-    margin-top: 3em;
-    top:15em;
-  }
-  .pictureChild{
-    padding: 10% 10%;
-    width: 70%;
-    max-width: 100%;
+    justify-content: space-between;
+    margin-top: 20em;
+    margin-bottom: 10rem;
+    padding: 0 16%;
+}
+
+.pictureChild {
+    width: 100%;
     height: auto;
+    max-width: 100%;
     margin-top: 10%;
+    padding: 0 1.5rem;
 
-  }
+  filter: grayscale(.8);
+  transition: all 350ms linear;
+}
 
+.pictureChild:hover {
+  filter: grayscale(0);
+}
 
+.locations-box {
+    width: 25%;
+    margin: 0 .5rem;
+  z-index: 2;
+}
+
+.city-headline {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.city-content {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+}
 
 
