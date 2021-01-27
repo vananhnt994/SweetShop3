@@ -33,8 +33,12 @@ with open('.ssh/authorized_keys/publicKey Van Anh') as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.sweetshop3.xyz','127.0.0.1','.localhost']
+ALLOWED_HOSTS = ['sweetshop3.xyz', '127.0.0.1', '[::8000]']
 
+SECURE_HSTS_SECONDS = 0
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
 
 # Application definition
 
