@@ -1,27 +1,186 @@
-#productImage{
-    width: 150px;
-    border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
+.card-title {
+    color: black;
 }
+#page-description {
+    color: black;
+}
+.product-name-best {
+    border-top: 1px solid #F9F9F9;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2vh;
+    font-size: 22px;
+}
+.product-name {
+    border-top: 1px solid #F9F9F9;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2vh;
+    font-size: 21px;
+}
+
+.border-box-bestseller {
+    width: 18em;
+    height: 23em;
+    max-width: 20em;
+    min-width: 8em;
+    max-height: 22em;
+    min-height: 10em;
+  background-color: white;
+    box-shadow: 3px 3px 10px #0000001A;
+    border: 1px solid #ddd;
+    border-radius: 4.5em;
+  box-sizing: border-box;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.pic {
+    width: 12vh;
+    max-width: 24vh;
+    height: 24vh;
+    max-height: 48vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.border-box {
+    width: 15em;
+    height: 19em;
+    max-width: 15em;
+    min-width: 5em;
+    max-height: 22em;
+    min-height: 7em;
+  background-color: white;
+    box-shadow: 3px 3px 10px #0000001A;
+    border: 1px solid #ddd;
+    border-radius: 3em;
+  box-sizing: border-box;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.bestseller h2 {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    /*margin: auto;*/
+}
+
+.drink-list h2 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+#productImage-bestseller {
+    display: block;
+    width: 8em;
+    /*margin: 2vh;*/
+    height: auto;
+    margin-top: 3vh;
+
+}
+.input-group{
+    width: 20%;
+}
+#productImage {
+    display: block;
+    width: 8em;
+    /*margin: 2vh;*/
+    height: auto;
+    margin-top: 2vh;
+
+}
+
 ol {
   list-style-type: none;
+
 }
 #bestsellerList{
     display: flex;
-    margin: 10em 10em 10em 30%;
+    justify-content: center;
+    padding-right: 5em;
+    margin-top: 3em;
+    align-items: center;
+    /*margin: 10em 15em 10em 30%;*/
     padding-bottom: 50px;
 }
-#bestsellerList ol li {
+#bestsellerList ol li{
      float: left;
+    padding-left: 1em;
+    margin-bottom: 2em;
 }
 
 #listDrinks {
     display: flex;
-    margin-left: 25em;
-    margin-right: 25em;
+    padding-bottom: 10em;
+    height: 50%;
+    max-height: 500vh;
+
+}
+.container {
+    display: flex;
+
 }
 #listDrinks ol li {
      float: left;
+    /*padding-left: 1.5em;*/
+    padding-bottom: 2em;
+
 }
 
+#listDrinks ol {
+    margin: auto;
+     -webkit-columns: 4 9em;
+     -moz-columns: 4 9em;
+          columns: 4 9em;
+    -webkit-column-gap: 1em;
+     -moz-column-gap: 1em;
+          column-gap: 1em;
+    -webkit-column-width: 200px;
+     -moz-column-width: 200px;
+          column-width: 200px;
+    min-width: 30%;
+    max-width: 110vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    display: flex;
+    height: 3px;
+    width: 3em;
+    background-color: #FF8B00;
+    margin: 0.75em 0em 2em 48%;
+}
+.product-name {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+}
+.input-group {
+    margin-left: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: #F9F9F9 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 10px #0000001A;
+    border-radius: 50px;
+    opacity: 1;
+}
+.search-submit {
+    background-color: white;
+}
+.bi-search {
+    color: #FF8B00;
+}

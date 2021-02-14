@@ -22,6 +22,7 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 STATIC_ROOT = os.path.dirname(__file__)+'/static/'
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -31,7 +32,7 @@ with open('.ssh/authorized_keys/publicKey Van Anh') as f:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['sweetshop3.xyz', '127.0.0.1', '[::8000]']
 
@@ -144,7 +145,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-
 ]
 
 

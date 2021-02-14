@@ -4,6 +4,7 @@ body{
 }
 .body-block{
   background: #F9F9F9;
+
 }
   #navbarTop{
     display: flex;
@@ -41,3 +42,43 @@ h5 {
 p {
   font-family: "Roboto Light", sans-serif;
 }
+
+.bottonm-block {
+  /*height: 19em;*/
+  background-color: white;
+  display: flex;
+  margin-top: 5%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2%;
+}
+.bottonm-block h4 {
+  color: #FF8B00;
+}
+.bottonm-block svg {
+  margin-bottom: 1em;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10%;
+  width: 25em;
+}
+.download-stores {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+.apple-badge {
+  margin-top: 1em;
+  display: flex;
+  width: 12em;
+  height: auto;
+}
+.android-badge {
+  display: flex;
+  width: 15em;
+  height: auto;
+}
+
