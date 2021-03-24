@@ -1,43 +1,73 @@
-
 {% extends 'base.html' %}
 <!DOCTYPE html>
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
+{% endblock %}
 
 <div class="container">
-{% block body_block %}
-    <div class="jumbotron" id="jumbotron" style="background-image: url(/static/images/green-tea-2356770_1920.png);">
-        <div class="text-white text-center py-5 px-4">
-        <div>
-          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Our Drinks</strong></h2>
-          <p class="mx-5 mb-5">A citrus cocktail or citrus-forward cocktail is a cocktail
-              whose dominant taste is that of a citrus fruit
-          </p>
+    {% block body_block %}
+        <div class="jumbotron" id="jumbotron" style="background-image: url(/static/images/green-tea-2356770_1920.png);">
+            <div class="text-white text-center py-5 px-4">
+                <div>
+                    <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Our Drinks</strong></h2>
+                    <p class="mx-5 mb-5" id="page-description">A citrus cocktail or citrus-forward cocktail is a cocktail
+                        whose dominant taste is that of a citrus fruit
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-append">
+                <button class="search-submit btn btn-secondary" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" color="#FF8B00" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+        <div style="" class="bestseller">
+            <h2>Best Sellers</h2>
+        </div>
+
+        <div class="divider"></div>
+        <div id ="bestsellerList">
+            <ol >
+                {% for product in bestseller %}
+                    <li>
+                        <div class="border-box-bestseller">
+                            <div class="pic">
+                                <img id="productImage-bestseller" src="{{ product.product_image.url }}">
+                            </div>
+                            <span class="product-name-best">{{ product.product_name }}</span>
+                        </div>
+
+                    </li>
+                {% endfor %}
+            </ol>
+        </div >
+
+        <div class="drink-list">
+            <h2>All Bakery</h2>
 
         </div>
-      </div>
-    </div>
-
-
-    <div>
-
-    </div>
-
-    <div id="listDrinks">
-        <ol>
-        {%  for product in products %}
-            <li>
-                <ol>
-                    <li><img src="\media\{{ product.product_image }}"><br/>
-                    {{ product.product_name }}</li>
-                </ol>
-            </li>
-        {% endfor %}
-        </ol>
-
-    </div>
-
-
-
-
-
-</div>
-{% endblock %}
+        <div class="divider"></div>
+        <div id="listDrinks">
+            <ol>
+                {%  for product in products %}
+                    <li>
+                        <div class="border-box">
+                            <div class="pic">
+                                <img id="productImage" src="{{ product.product_image.url }}">
+                            </div>
+                            <span class="product-name">{{ product.product_name }}</span>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+        </div>
+    {% endblock %}

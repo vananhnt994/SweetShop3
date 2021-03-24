@@ -1,16 +1,11 @@
-
-from product_catalog.models import  Product,Category
-from django.shortcuts import render, get_object_or_404
-from django.template import RequestContext
-from product_catalog import forms
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from product_catalog.models import Product, Category
+from django.shortcuts import render
 from django.views.generic.list import ListView
-from django.views import generic
+
 
 
 # Create your views here.
 class ProductListView(ListView):
-
     model = Product
 
     def drink_list(request):
@@ -22,8 +17,9 @@ class ProductListView(ListView):
         return render(request,
                       'product_catalog/drink_list.html',
                       {'categories': categories,
-                       'bestseller' : besteller,
+                       'bestseller': besteller,
                        'products': products})
+
     def cake_list(request):
 
         categories = Category.objects.get(slug="cake")
@@ -31,14 +27,7 @@ class ProductListView(ListView):
         besteller = products[:3]
 
         return render(request,
-                      'product_catalog/drink_list.html',
+                      'product_catalog/cake_list.html',
                       {'categories': categories,
                        'bestseller': besteller,
                        'products': products})
-
-
-
-
-
-
-
